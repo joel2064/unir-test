@@ -8,7 +8,7 @@ pipeline{
                     branches: [[name: '*/master' ]],
                     extensions: scm.extensions,
                     userRemoteConfigs: [[
-                        url: 'https://github.com/ramosunir/unir-test.git'
+                        url: 'https://github.com/joel2064/unir-test.git'
                     ]]
                 ])
             }
