@@ -2,7 +2,7 @@ pipeline{
     agent any
 
     stages{
-        stage('Hello'){
+        stage('Checkout'){
             steps{
                 checkout([$class: 'GitSCM',
                     branches: [[name: '*/master' ]],
@@ -12,6 +12,9 @@ pipeline{
                     ]]
                 ])
             }
+        }
+        stage('Build'){
+            sh 'python3 ./app/api.py'
         }
     }
 }
