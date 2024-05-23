@@ -14,7 +14,10 @@ pipeline{
             }
         }
         stage('Build'){
-            sh 'python3 ./app/api.py'
+            steps{
+                sh 'python3 ./app/api.py'
+            }
+
         }
     }
 }
